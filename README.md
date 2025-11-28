@@ -23,13 +23,13 @@ A primary goal of the assignment was a 250 MHz frequency target. My synthesis re
 * **Achieved Frequency:** ~74 MHz
 * **Critical Path Analysis:** The critical path was dominated by the fully combinational multiplication (Booth + CSA) and division (Restoring) units.
 * **Conclusion:** The project demonstrates the fundamental trade-off in processor design. While the Kogge-Stone adder and barrel shifters are extremely fast, the single-cycle requirement means the clock period must be long enough for the *slowest* operation (in this case, `MUL` and `DIV`).
-* **Proposed Solution:** To meet 250 MHz, the architecture would need to be evolved into a **multi-cycle** or **pipelined** design, where operations like `MUL` and `DIV` can take multiple clock cycles to execute without holding back simpler operations. This analysis is detailed in the [full design report](doc/coa_assignment2_report.pdf).
+* **Proposed Solution:** To meet 250 MHz, the architecture would need to be evolved into a **multi-cycle** or **pipelined** design, where operations like `MUL` and `DIV` can take multiple clock cycles to execute without holding back simpler operations. This analysis is detailed in the [full design report](https://github.com/himanshusuryawanshi/ALU-Design-for-the-SimpleRISC-Core/blob/main/Project%20Report/coa_assignment2_report.pdf).
 
 ##  Repository Structure
 
 * `/rtl`: Contains all synthesizable Verilog source code (e.g., `alu.v` etc.).
 * `/sim`: Contains the testbench (`tb_simplerisc.v`), assembler (`asm2py.py`), and test program (`program.asm`).
-* `/doc`: Includes the [full design report](doc/coa_assignment2_report.pdf).
+* `/doc`: Includes the [full design report](https://github.com/himanshusuryawanshi/ALU-Design-for-the-SimpleRISC-Core/blob/main/Project%20Report/coa_assignment2_report.pdf).
 * `/results screenshots`: Simulation screenshots demonstrating correct operation.
 
 ##  How to Run This Project
